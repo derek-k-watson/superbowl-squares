@@ -148,8 +148,8 @@ function App() {
         <thead>
           <tr>
             <th></th>
-            {chiefsNumbers.map((n) => (
-              <th style={{ textAlign: "center" }}>
+            {chiefsNumbers.map((n, i) => (
+              <th style={{ textAlign: "center" }} key={`chiefs-${i}`}>
                 {<span>{n}</span>}
                 <br />
                 <img
@@ -162,15 +162,15 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {ninersNumbers.map((n) => (
-            <tr>
+          {ninersNumbers.map((n, i) => (
+            <tr key={`niners-${i}`}>
               <th style={{ textAlign: "center" }}>
                 {n}
                 <br />
                 <img src={niners} alt="49ers Logo" style={{ height: "30px" }} />
               </th>
-              {chiefsNumbers.map((n) => (
-                <Square initials={currentInitials} onSecondClick={() => handleShowModal()} hasGameStarted={gameMode} />
+              {chiefsNumbers.map((n, i) => (
+                <Square key={`square-${i}`} initials={currentInitials} onSecondClick={() => handleShowModal()} hasGameStarted={gameMode} />
               ))}
             </tr>
           ))}
