@@ -1,0 +1,10 @@
+@import "../../styles/colors";
+
+.customBtn {
+  border-radius: 0;
+  font-family: "Fira Code", monospace;
+  font-size: 3rem;
+  color: $text-color-lt;
+  background-color: $primary-color;
+  border: none;
+}

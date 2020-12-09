@@ -1,0 +1,21 @@
+@import "./colors";
+
+.app {
+    text-align: center;
+  }
+  table > tbody > tr > td {
+    background-color: #fafafa;
+    height: 75px;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+  }
+  table > tbody > tr > td:hover {
+    background-color: $primary-color;
+    color: #ffb81c;
+    cursor: pointer;
+  }
+  
+  input[type="text"] {
+    background-color: #fafafa;
+  }
